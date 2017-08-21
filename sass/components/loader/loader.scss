@@ -1,15 +1,15 @@
 // variables who are used only in one file should stay in that file
 $animation-delay: 1.2s;
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body {
+body.loader {
     background-color: orange;
 }
 
-.container{
+.container {
     height: 100vh; // viewport units example
 }
 

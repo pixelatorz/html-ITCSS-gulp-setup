@@ -1,32 +1,43 @@
 @mixin setButtonColor($baseColor) {
+    background-color: $baseColor;
+    border-color: darken($baseColor, 15%);
 
-  background-color: $baseColor;
-
-  border-color: darken($baseColor, 15%);
-
-  &:hover {
-    background-color: lighten($baseColor, 5%);
-  }
+    &:hover {
+        background-color: lighten($baseColor, 5%);
+    }
 }
 
 .btn {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 4px;
+    color: $black;
+    padding: 4px 8px;
+    margin: 2px;
+    @include setButtonColor($light-gray);
 
-  display: inline-block;
-  border: 1px solid;
-  border-radius: 4px;
+    &:hover {
+        cursor: pointer;
+    }
 
-  @include setButtonColor($light-gray);
+    &.btn-success {
+        color: $white;
+        @include setButtonColor($green);
+    }
 
-  color: $black;
+    &.btn-danger {
+        color: $white;
+        @include setButtonColor($red);
+    }
 
-  padding: 4px 8px;
-  margin: 2px;
+    &.btn-primary {
+        color: $white;
+        @include setButtonColor($primary);
+    }
 
-  &:hover { cursor: pointer; }
-
-  &.btn-success { color: $white; @include setButtonColor($green); }
-  &.btn-danger { color: $white; @include setButtonColor($red); }
-  &.btn-primary { color: $white; @include setButtonColor($primary); }
-  &.btn-secondary { color: $white; @include setButtonColor($secondary-dark); }
+    &.btn-secondary {
+        color: $white;
+        @include setButtonColor($secondary-dark);
+    }
 
 }
