@@ -1,9 +1,13 @@
 @charset "UTF-8";
 
+@import "./colours";
+
+/* Components */
+@import "./components/button/button";
+@import "./components/loader/loader";
+@import "./components/body/body";
 @import "colours";
 
 @import "./tools/mixins";
-
 @import "./objects/animations";
-
 @import "./components/loader/loader";

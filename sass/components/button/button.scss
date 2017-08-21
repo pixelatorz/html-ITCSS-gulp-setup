@@ -1,0 +1,32 @@
+@mixin setButtonColor($baseColor) {
+
+  background-color: $baseColor;
+
+  border-color: darken($baseColor, 15%);
+
+  &:hover {
+    background-color: lighten($baseColor, 5%);
+  }
+}
+
+.btn {
+
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+
+  @include setButtonColor($light-gray);
+
+  color: $black;
+
+  padding: 4px 8px;
+  margin: 2px;
+
+  &:hover { cursor: pointer; }
+
+  &.btn-success { color: $white; @include setButtonColor($green); }
+  &.btn-danger { color: $white; @include setButtonColor($red); }
+  &.btn-primary { color: $white; @include setButtonColor($primary); }
+  &.btn-secondary { color: $white; @include setButtonColor($secondary-dark); }
+
+}
