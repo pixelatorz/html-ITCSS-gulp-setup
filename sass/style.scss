@@ -2,5 +2,8 @@
 
 @import "colours";
 
-@import "objects/animations";
-@import "./loader/loader";
+@import "./tools/mixins";
+
+@import "./objects/animations";
+
+@import "./components/loader/loader";

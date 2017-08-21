@@ -1,27 +1,44 @@
-body{
-  background-color: orange;
+// variables who are used only in one file should stay in that file
+$animation-delay: 1.2s;
+
+*{
+    box-sizing: border-box;
 }
 
-.rectangle-bounce{
+body {
+    background-color: orange;
+}
+
+.container{
+    height: 100vh; // viewport units example
+}
+
+.rectangle-bounce {
     height: 60px;
-    width: 60px;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    opacity: 0;
-    margin-right: 40px;
-    display: inline-block;
-    position: relative;
-    -webkit-transition: all 0.3s ease-in-out 0;
-    transition: all 0.3s ease-in-out 0;
-    
-    div{
-      height: 100%; 
-      width: 7px;
-      margin: 0 3px 0 0;
-      background-color: #fff;
-      display: inline-block;
-      -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-      animation: stretchdelay 1.2s infinite ease-in-out;
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+    @include v-align(relative); // mixin example
+
+    // animation example: animation-name animation-delay iteration-count animation-timing-function;
+    div {
+        height: 100%;
+        width: 7px;
+        margin: 0 3px 0 0;
+        background-color: #fff;
+        display: inline-block;
+        -webkit-animation: stretchdelay $animation-delay infinite ease-in-out;
+        animation: stretchdelay $animation-delay infinite ease-in-out;
+    }
+
+    /*
+        for loop example $i = the variable
+        use ${} to attach the variable to the selector
+     */
+    @for $i from 1 through 5 {
+        div.rect#{$i} {
+            -webkit-animation-delay: -($animation-delay -($i/10));
+            animation-delay: -($animation-delay -($i/10));
+        }
     }
 }

@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 
 
 gulp.task('styles', function() {
-    gulp.src('sass/**/*.scss')
+    gulp.src('sass/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'));
 });
@@ -24,9 +24,9 @@ gulp.task('connect', function() {
 //Watch task
 gulp.task('watch',function() {
     gulp.watch('sass/**/*.scss',['styles']);
-    gulp.watch('sass/**/*.html',['styles']);
+    gulp.watch('**/*.html',['styles']);
 
 });
 
 //Watch task
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['styles','connect', 'watch']);
