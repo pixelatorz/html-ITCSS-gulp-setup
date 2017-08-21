@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-  connect = require('gulp-connect');
+var connect = require('gulp-connect');
 
 
 gulp.task('styles', function() {
@@ -16,7 +16,6 @@ gulp.task('html', function () {
 
 gulp.task('connect', function() {
   connect.server({
-    root: '.',
     livereload: true
   });
 });

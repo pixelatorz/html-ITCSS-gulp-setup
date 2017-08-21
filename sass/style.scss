@@ -1,3 +1,8 @@
 @charset "UTF-8";
 
-@import "colours";
+@import "./colours";
+
+/* Components */
+@import "./components/button/button";
+@import "./components/loader/loader";
+@import "./components/body/body";

@@ -1,0 +1,41 @@
+/* Components */
+.btn {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: #efefef;
+  border-color: #c9c9c9;
+  color: #333333;
+  padding: 4px 8px;
+  margin: 2px; }
+  .btn:hover {
+    background-color: #fcfcfc; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn.btn-success {
+    color: #fefefe;
+    background-color: #67a871;
+    border-color: #477c4f; }
+    .btn.btn-success:hover {
+      background-color: #77b180; }
+  .btn.btn-danger {
+    color: #fefefe;
+    background-color: #ba3933;
+    border-color: #7e2723; }
+    .btn.btn-danger:hover {
+      background-color: #ca433d; }
+  .btn.btn-primary {
+    color: #fefefe;
+    background-color: #046380;
+    border-color: #022a36; }
+    .btn.btn-primary:hover {
+      background-color: #057699; }
+  .btn.btn-secondary {
+    color: #fefefe;
+    background-color: #A7A37E;
+    border-color: #817d58; }
+    .btn.btn-secondary:hover {
+      background-color: #b1ae8d; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
