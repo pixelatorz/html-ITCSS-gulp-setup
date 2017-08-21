@@ -1,0 +1,114 @@
+// clearfix!
+
+@mixin clearfix {
+  *zoom: 1;
+  overflow: hidden;
+}
+
+@mixin legacy-pie-clearfix {
+  *zoom: 1;
+
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+    }
+}
+
+@mixin pie-clearfix {
+  *zoom: 1;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+}
+
+// backgrounds
+@mixin vector-bg-with-fallback($name) {
+  background: url('#{$name}.png') no-repeat;
+  background: rgba(0,0,0,0) url('#{$name}.svg') no-repeat;
+}
+// breakpoints for MQ in the element
+
+@mixin breakpoint($point) {
+
+  @if $point == xlg {
+    @media (min-width: $screen-xl) {
+      @content
+    }
+  }
+
+  @if $point == lg {
+    @media (min-width: $screen-lg) {
+      @content
+    }
+  }
+  @else if $point == md {
+    @media (min-width: $screen-md) {
+      @content
+    }
+  }
+
+  @else if $point == sm {
+    @media (min-width: $screen-sm) {
+      @content
+    }
+  }
+
+  @else if $point == xsl {
+    @media (min-width: $screen-xsl) {
+      @content
+    }
+  }
+
+  @else if $point == xs {
+    @media (min-width: $screen-xs) {
+      @content
+    }
+  }
+
+  @else {
+    @media (min-width: $point) {
+      @content
+    }
+  }
+}
+// generate the correct line height
+
+@mixin font-size($sizeValue: 16, $spaceValue: 1.25) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 16) + rem;
+  line-height: $spaceValue;
+}
+// vertical align the unknown
+@mixin v-align($position: absolute) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%); /* IE */
+  -moz-transform: translateY(-50%); /* Firefox */
+  -webkit-transform: translateY(-50%); /* Safari and Chrome */
+  -o-transform: translateY(-50%);
+}
+
+// hacks
+
+@mixin fontsmoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@mixin fill-parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

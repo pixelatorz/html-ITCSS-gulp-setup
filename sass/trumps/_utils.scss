@@ -1,0 +1,73 @@
+
+// float utilities
+.u-pull-left {
+  float: left;
+}
+.u-pull-right {
+  float: right;
+}
+// box utilities
+.u-width100 {
+  width: 100% !important;
+}
+.u-width50 {
+  width: 100%;
+
+  @include breakpoint(sm);
+    width: 50%;
+}
+.u-height100 {
+  height: 100% !important;
+}
+.u-vertical-align {
+  @include v-align;
+}
+// text utilities
+.u-tc {
+  text-align: center;
+}
+.u-tl {
+  text-align: left;
+}
+.u-tr {
+  text-align: right;
+}
+.u-hide {
+  display: none;
+}
+
+.u-hide-mobile{
+  display: none;
+
+  @include breakpoint(sm) {
+    display: block;
+  }
+}
+.u-hide-desktop {
+    display: block;
+
+    @include breakpoint(sm) {
+        display: none;
+    }
+}
+
+.u-display-table{
+  display: table;
+}
+
+//animations
+.u-delay01s{
+  @include animation-delay(0.1s);
+}
+
+.u-delay025s{
+  @include animation-delay(0.25s);
+}
+
+.u-delay05s {
+  @include animation-delay(0.5s);
+}
+
+.u-delay1s {
+  @include animation-delay(1s);
+}

@@ -1,0 +1,26 @@
+//animation
+$standard-bezier: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+// breakpoints
+$screen-xxl: 1600px;
+$screen-xl: 1300px;
+$screen-lg: 1170px;
+$screen-md: 970px;
+$screen-sm: 768px;
+$screen-xsl: 600px;
+$screen-xs: 480px;
+$screen-xxs: 320px;
+
+// grid
+$total_width: 100%;
+$total_columns: 12;
+$container_margin: 2%;
+$gutter_width: 2%;
+$max_width: 1230px;
+$max_width_no_unit: 1230;
+$max_width_medium: 960px;
+$max_width_small: 500px;
+$margin: 20px;
+
+$base-for-rem: 16;
+

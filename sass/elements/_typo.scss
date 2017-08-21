@@ -1,0 +1,81 @@
+//---
+//title: typography
+//name: basic components
+//category: Base CSS
+//---
+
+//font sizes
+$font-size-h1: 35;
+$font-size-h2: 30;
+$font-size-h3: 28;
+$font-size-h4: 12;
+$font-size-body: 17;
+$font-size-body-lg: 20;
+$font-size-h1-margin: 30;
+$font-size-h2-margin: 20;
+$font-size-h3-margin: 17;
+$font-size-h4-margin: 17;
+$font-size-body-margin: 17;
+$font-size-sm: 14;
+$font-size_xs: 10;
+
+html {
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+    }
+}
+
+body {
+    @include font-size($font-size-body, 1.3);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+    color: $color-text;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    &.branded{
+        color: $color-brand;
+    }
+}
+
+h1 {
+    @include font-size($font-size-h1);
+    @include margin-bottom($font-size-h1-margin);
+}
+
+h2 {
+    @include font-size($font-size-h2);
+    @include margin-bottom($font-size-h2-margin);
+}
+
+h3 {
+    @include font-size($font-size-h3);
+    @include margin-bottom($font-size-h3-margin);
+    font-weight: 700;
+}
+
+h4 {
+    @include font-size($font-size-h4);
+    @include margin-bottom($font-size-h4-margin);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+p {
+    @include margin-bottom($font-size-body-margin);
+}
+
+strong {
+    font-weight: normal;
+}
