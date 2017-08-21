@@ -1,8 +1,8 @@
 # simple html - sass setup
 
-starting grunt:
+starting gulp server:
 ```
-> node_modules/.bin/grunt
+> node_modules/.bin/gulp
 ```
 
 go to : http://localhost:8080/
