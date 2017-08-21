@@ -19,3 +19,5 @@ tmpcookie.txt
 uploads/*
 tmp
 npm-debug.log
+
+.idea
