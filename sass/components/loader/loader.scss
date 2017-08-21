@@ -1,0 +1,27 @@
+body{
+  background-color: orange;
+}
+
+.rectangle-bounce{
+    height: 60px;
+    width: 60px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    margin-right: 40px;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out 0;
+    transition: all 0.3s ease-in-out 0;
+    
+    div{
+      height: 100%; 
+      width: 7px;
+      margin: 0 3px 0 0;
+      background-color: #fff;
+      display: inline-block;
+      -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+      animation: stretchdelay 1.2s infinite ease-in-out;
+    }
+}
