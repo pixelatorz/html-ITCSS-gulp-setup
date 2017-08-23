@@ -11,6 +11,10 @@ body.loader {
 
 .container {
     height: 100vh; // viewport units example
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rectangle-bounce {
@@ -18,13 +22,11 @@ body.loader {
     width: 70px;
     margin: 0 auto;
     display: block;
-    @include v-align(relative); // mixin example
 
     // animation example: animation-name animation-delay iteration-count animation-timing-function;
     div {
         height: 100%;
         width: 7px;
-        margin: 0 3px 0 0;
         background-color: #fff;
         display: inline-block;
         -webkit-animation: stretchdelay $animation-delay infinite ease-in-out;
